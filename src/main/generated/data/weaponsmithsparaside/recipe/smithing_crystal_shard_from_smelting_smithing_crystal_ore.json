@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "smithing_crystal_shard",
+  "ingredient": {
+    "item": "weaponsmithsparaside:smithing_crystal_ore"
+  },
+  "result": {
+    "id": "weaponsmithsparaside:smithing_crystal_shard"
+  }
+}

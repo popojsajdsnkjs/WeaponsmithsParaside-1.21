@@ -2,6 +2,8 @@ package net.gaeck.weaponsmithsparaside.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.gaeck.weaponsmithsparaside.block.ModBlocks;
+import net.gaeck.weaponsmithsparaside.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
@@ -28,6 +30,8 @@ public class ModLootTableProvider  extends FabricBlockLootTableProvider {
         //addDrop(block, oreDrops(item, block(silk touch)); - drop itself
 
         // use custom method multipleOreDrops for, you guessed it, blocks that drop multiple items (random amount of one item)
+
+        addDrop(ModBlocks.SMITHING_CRYSTAL_ORE, oreDrops(ModBlocks.SMITHING_CRYSTAL_ORE, ModItems.SMITHING_CRYSTAL_SHARD));
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrop, float maxDrop) {

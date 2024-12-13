@@ -2,6 +2,8 @@ package net.gaeck.weaponsmithsparaside.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.gaeck.weaponsmithsparaside.block.ModBlocks;
+import net.gaeck.weaponsmithsparaside.item.ModItems;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -57,5 +59,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         //recipes are named after what the result is so if you want to make more than one you need to add IdentifierOf(modname.MOD_ID, "name_of_recipe") i offer to after the exporter
 
+        List<ItemConvertible> SMITHING_CRYSTAL_SHARD_SMELTABLES = List.of(ModBlocks.SMITHING_CRYSTAL_ORE);
+        offerSmelting(recipeExporter, SMITHING_CRYSTAL_SHARD_SMELTABLES, RecipeCategory.MISC, ModItems.SMITHING_CRYSTAL_SHARD,0.1f,200,"smithing_crystal_shard");
+        offerBlasting(recipeExporter, SMITHING_CRYSTAL_SHARD_SMELTABLES, RecipeCategory.MISC, ModItems.SMITHING_CRYSTAL_SHARD,0.1f,100,"smithing_crystal_shard");
+
+        offerCompactingRecipe(recipeExporter, RecipeCategory.MISC, ModItems.SMITHING_CRYSTAL, ModItems.SMITHING_CRYSTAL_SHARD);
     }
 }

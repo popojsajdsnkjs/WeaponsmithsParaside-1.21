@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "weaponsmithsparaside:item/smithing_crystal_shard"
+  }
+}

@@ -2,6 +2,8 @@ package net.gaeck.weaponsmithsparaside;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.gaeck.weaponsmithsparaside.block.ModBlocks;
+import net.gaeck.weaponsmithsparaside.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,5 +13,7 @@ public class WeaponsmithsParaside implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModBlocks.registerModBlocks();
+		ModItems.registerModItems();
 	}
 }

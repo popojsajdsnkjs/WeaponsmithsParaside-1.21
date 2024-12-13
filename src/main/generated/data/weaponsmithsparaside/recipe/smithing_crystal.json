@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "weaponsmithsparaside:smithing_crystal_shard"
+    },
+    {
+      "item": "weaponsmithsparaside:smithing_crystal_shard"
+    },
+    {
+      "item": "weaponsmithsparaside:smithing_crystal_shard"
+    },
+    {
+      "item": "weaponsmithsparaside:smithing_crystal_shard"
+    },
+    {
+      "item": "weaponsmithsparaside:smithing_crystal_shard"
+    },
+    {
+      "item": "weaponsmithsparaside:smithing_crystal_shard"
+    },
+    {
+      "item": "weaponsmithsparaside:smithing_crystal_shard"
+    },
+    {
+      "item": "weaponsmithsparaside:smithing_crystal_shard"
+    },
+    {
+      "item": "weaponsmithsparaside:smithing_crystal_shard"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "weaponsmithsparaside:smithing_crystal"
+  }
+}
