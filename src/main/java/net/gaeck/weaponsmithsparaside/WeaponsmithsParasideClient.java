@@ -1,4 +1,10 @@
 package net.gaeck.weaponsmithsparaside;
 
-public class WeaponsmithsParasideClient {
+import net.fabricmc.api.ClientModInitializer;
+
+public class WeaponsmithsParasideClient implements ClientModInitializer {
+    @Override
+    public void onInitializeClient() {
+
+    }
 }
