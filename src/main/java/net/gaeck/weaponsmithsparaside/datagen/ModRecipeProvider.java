@@ -5,7 +5,9 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.gaeck.weaponsmithsparaside.block.ModBlocks;
 import net.gaeck.weaponsmithsparaside.item.ModItems;
 import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 
@@ -64,5 +66,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerBlasting(recipeExporter, SMITHING_CRYSTAL_SHARD_SMELTABLES, RecipeCategory.MISC, ModItems.SMITHING_CRYSTAL_SHARD,0.1f,100,"smithing_crystal_shard");
 
         offerCompactingRecipe(recipeExporter, RecipeCategory.MISC, ModItems.SMITHING_CRYSTAL, ModItems.SMITHING_CRYSTAL_SHARD);
+
+        DefaultHammerRecipe(RecipeCategory.TOOLS,ModItems.STONE_HAMMER,Items.COBBLESTONE,Items.IRON_INGOT,Items.COBBLESTONE,recipeExporter);
+        DefaultHammerRecipe(RecipeCategory.TOOLS,ModItems.IRON_HAMMER,Items.IRON_INGOT,Items.DIAMOND,Items.IRON_INGOT,recipeExporter);
+        DefaultHammerRecipe(RecipeCategory.TOOLS,ModItems.DIAMOND_HAMMER,Items.DIAMOND,ModItems.SMITHING_CRYSTAL_SHARD,Items.COBBLESTONE,recipeExporter);
+    }
+    public void DefaultHammerRecipe (RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible material, ItemConvertible hammerCore, ItemConvertible unlockRecipeItem, RecipeExporter recipeExporter){
+        ShapedRecipeJsonBuilder.create(recipeCategory,output)
+                .pattern("CM ")
+                .pattern("MS ")
+                .pattern("  S")
+                .input('M', material)
+                .input('S', Items.STICK)
+                .input('C', hammerCore)
+                .criterion(hasItem(unlockRecipeItem),conditionsFromItem(unlockRecipeItem))// unlocks recipe
+                .offerTo(recipeExporter);
     }
 }

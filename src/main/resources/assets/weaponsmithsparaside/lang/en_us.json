@@ -4,5 +4,12 @@
 
   "block.weaponsmithsparaside.smithing_crystal_ore": "Smithing Crystal Ore",
 
-  "item.weaponsmithsparaside.stone_hammer": "Stone Hammer"
+  "item.weaponsmithsparaside.stone_hammer": "Stone Hammer",
+  "item.weaponsmithsparaside.iron_hammer": "Iron Hammer",
+  "item.weaponsmithsparaside.diamond_hammer": "Diamond Hammer",
+
+  "tooltip.weaponsmithsparaside.hammer_mine_3x3": "§7Mines in 3x3 area",
+  "tooltip.weaponsmithsparaside.mace_hammer_behavior": "§7Works like a mace dealing additional damage per fallen block",
+  "tooltip.weaponsmithsparaside.low_hammer_mace_stats": "§7Deals §e0.25 damage per block§7, damage doesn't rise after §e50 blocks§7 fallen",
+  "tooltip.weaponsmithsparaside.shift_for_more_info": "§b[SHIFT]§7 for more info"
 }

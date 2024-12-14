@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "minecraft:iron_ingot"
+    },
+    "M": {
+      "item": "minecraft:cobblestone"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "CM ",
+    "MS ",
+    "  S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "weaponsmithsparaside:stone_hammer"
+  }
+}

@@ -1,1 +1,5 @@
-// 1.21	2024-12-13T21:46:22.7815928	WeaponsmithsParaside/Tags for minecraft:item
+// 1.21	2024-12-14T20:29:57.1703274	WeaponsmithsParaside/Tags for minecraft:item
+f6bb5f603847ceafd2906b158c2911292fc61799 data\minecraft\tags\item\enchantable\durability.json
+f6bb5f603847ceafd2906b158c2911292fc61799 data\minecraft\tags\item\enchantable\mining.json
+f6bb5f603847ceafd2906b158c2911292fc61799 data\minecraft\tags\item\enchantable\fire_aspect.json
+f6bb5f603847ceafd2906b158c2911292fc61799 data\minecraft\tags\item\enchantable\mining_loot.json

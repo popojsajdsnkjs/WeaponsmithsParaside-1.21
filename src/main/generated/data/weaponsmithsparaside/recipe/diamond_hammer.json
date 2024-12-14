@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "weaponsmithsparaside:smithing_crystal_shard"
+    },
+    "M": {
+      "item": "minecraft:diamond"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "CM ",
+    "MS ",
+    "  S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "weaponsmithsparaside:diamond_hammer"
+  }
+}

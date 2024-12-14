@@ -1,5 +1,6 @@
 package net.gaeck.weaponsmithsparaside.item.custom;
 
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
@@ -12,12 +13,14 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.MiningToolItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.network.packet.s2c.play.EntityVelocityUpdateS2CPacket;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
@@ -80,7 +83,7 @@ public class HammerMaceLowFallDamageItem extends MiningToolItem {
             } else if (height < 50) {
                 damage = 0.25f * height;
             } else {
-                damage = 0.25f * 50;
+                damage = 15;
             }
 
                 return livingEntity.getWorld() instanceof ServerWorld serverWorld
@@ -196,5 +199,17 @@ public class HammerMaceLowFallDamageItem extends MiningToolItem {
 
     public static boolean shouldDealAdditionalDamage(LivingEntity attacker) {
         return attacker.fallDistance > 5.0F && !attacker.isFallFlying();
+    }
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.hammer_mine_3x3"));
+        if (Screen.hasShiftDown()){
+        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.mace_hammer_behavior"));
+        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.low_hammer_mace_stats"));
+
+        } else {
+            tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.shift_for_more_info"));
+        }
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }
