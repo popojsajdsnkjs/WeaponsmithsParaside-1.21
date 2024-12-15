@@ -26,7 +26,7 @@ public class ModItems {
 
     public static final Item DIAMOND_HAMMER = registerItem("diamond_hammer",
             new HammerMaceLowFallDamageItem(ToolMaterials.DIAMOND,new Item.Settings().attributeModifiers(
-                    PickaxeItem.createAttributeModifiers(ToolMaterials.DIAMOND, 9, -3.6f))));
+                    PickaxeItem.createAttributeModifiers(ToolMaterials.DIAMOND, 9.5f, -3.6f))));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(WeaponsmithsParaside.MOD_ID, name), item);

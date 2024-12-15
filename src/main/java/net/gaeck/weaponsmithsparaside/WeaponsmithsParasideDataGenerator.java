@@ -3,6 +3,9 @@ package net.gaeck.weaponsmithsparaside;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.gaeck.weaponsmithsparaside.datagen.*;
+import net.gaeck.weaponsmithsparaside.enchantment.ModEnchantments;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
 
 public class WeaponsmithsParasideDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -14,5 +17,11 @@ public class WeaponsmithsParasideDataGenerator implements DataGeneratorEntrypoin
 		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModRegistryDataGenerator::new);
+	}
+
+	@Override
+	public void buildRegistry(RegistryBuilder registryBuilder) {
+		registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantments::bootstrap);
 	}
 }
