@@ -27,8 +27,6 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.SMITHING_CRYSTAL_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.SMITHING_CRYSTAL, Models.GENERATED);
-        itemModelGenerator.register(ModItems.STONE_HAMMER, Models.HANDHELD_MACE);
-        itemModelGenerator.register(ModItems.IRON_HAMMER, Models.HANDHELD_MACE);
-        itemModelGenerator.register(ModItems.DIAMOND_HAMMER, Models.HANDHELD_MACE);
+        itemModelGenerator.register(ModItems.FROSTBITE, Models.HANDHELD);
     }
 }

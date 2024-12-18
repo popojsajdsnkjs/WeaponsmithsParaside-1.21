@@ -2,6 +2,7 @@ package net.gaeck.weaponsmithsparaside.util;
 
 import net.gaeck.weaponsmithsparaside.WeaponsmithsParaside;
 import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;

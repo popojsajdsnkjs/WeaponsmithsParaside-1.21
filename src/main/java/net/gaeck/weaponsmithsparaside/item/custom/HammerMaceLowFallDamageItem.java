@@ -93,20 +93,7 @@ public class HammerMaceLowFallDamageItem extends MiningToolItem {
         }
     }
 
-    private static void knockbackNearbyEntities(World world, PlayerEntity player, Entity attacked) {
-        world.syncWorldEvent(WorldEvents.SMASH_ATTACK, attacked.getSteppingPos(), 750);
-        world.getEntitiesByClass(LivingEntity.class, attacked.getBoundingBox().expand(3.5), getKnockbackPredicate(player, attacked)).forEach(entity -> {
-            Vec3d vec3d = entity.getPos().subtract(attacked.getPos());
-            double d = getKnockback(player, entity, vec3d);
-            Vec3d vec3d2 = vec3d.normalize().multiply(d);
-            if (d > 0.0) {
-                entity.addVelocity(vec3d2.x, 0.7F, vec3d2.z);
-                if (entity instanceof ServerPlayerEntity serverPlayerEntity) {
-                    serverPlayerEntity.networkHandler.sendPacket(new EntityVelocityUpdateS2CPacket(serverPlayerEntity));
-                }
-            }
-        });
-    }
+
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (attacker instanceof ServerPlayerEntity serverPlayerEntity && shouldDealAdditionalDamage(serverPlayerEntity)) {
@@ -141,7 +128,6 @@ public class HammerMaceLowFallDamageItem extends MiningToolItem {
                 );
             }
 
-            knockbackNearbyEntities(serverWorld, serverPlayerEntity, target);
         }
 
         return true;
@@ -200,6 +186,7 @@ public class HammerMaceLowFallDamageItem extends MiningToolItem {
     public static boolean shouldDealAdditionalDamage(LivingEntity attacker) {
         return attacker.fallDistance > 5.0F && !attacker.isFallFlying();
     }
+    /*
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.hammer_mine_3x3"));
@@ -211,5 +198,5 @@ public class HammerMaceLowFallDamageItem extends MiningToolItem {
             tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.shift_for_more_info"));
         }
         super.appendTooltip(stack, context, tooltip, type);
-    }
+    }*/
 }

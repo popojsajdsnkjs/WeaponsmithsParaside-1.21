@@ -1,9 +1,7 @@
-// 1.21	2024-12-15T23:10:30.9624653	WeaponsmithsParaside/Model Definitions
+// 1.21	2024-12-17T00:05:31.9247886	WeaponsmithsParaside/Model Definitions
 4fa17373ef80d9f7a031bc215ab08dfbbe535f88 assets\weaponsmithsparaside\models\item\smithing_crystal_shard.json
-d9fe5c6c6d6878c40b9140b6581c077ab656b57d assets\weaponsmithsparaside\models\item\iron_hammer.json
-577f9f0296ad701dc117150877960d8809343eba assets\weaponsmithsparaside\models\item\stone_hammer.json
+88c7099a8c13f379007b9ad835c5f22fe2f9efb0 assets\weaponsmithsparaside\models\item\frostbite.json
 ef03b0c555cdb07e944f450afc7319bd0703396c assets\weaponsmithsparaside\blockstates\smithing_crystal_ore.json
 b0aeca039be37a3abefe8721ee65d7eb53d548cc assets\weaponsmithsparaside\models\item\smithing_crystal.json
-c7a8dc58102054eb0f79e79f27c058bdc9651afc assets\weaponsmithsparaside\models\item\diamond_hammer.json
 b8d2222417ab4437f47c080ceb77b96072a506b1 assets\weaponsmithsparaside\models\item\smithing_crystal_ore.json
 3a8e66a38844d75ff00eeb7c2440604b6d39943c assets\weaponsmithsparaside\models\block\smithing_crystal_ore.json

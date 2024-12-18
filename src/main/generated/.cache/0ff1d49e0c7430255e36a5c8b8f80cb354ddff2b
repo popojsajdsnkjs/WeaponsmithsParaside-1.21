@@ -1,6 +1,6 @@
-// 1.21	2024-12-15T23:10:30.9634659	WeaponsmithsParaside/Tags for minecraft:item
-f6bb5f603847ceafd2906b158c2911292fc61799 data\minecraft\tags\item\enchantable\durability.json
-f6bb5f603847ceafd2906b158c2911292fc61799 data\weaponsmithsparaside\tags\item\smash_enchantable.json
-f6bb5f603847ceafd2906b158c2911292fc61799 data\minecraft\tags\item\enchantable\mining.json
+// 1.21	2024-12-17T00:05:31.9268854	WeaponsmithsParaside/Tags for minecraft:item
+1c378fa6e60f6f48a8ebde02bf951b4a438e2567 data\minecraft\tags\item\enchantable\durability.json
+1c378fa6e60f6f48a8ebde02bf951b4a438e2567 data\weaponsmithsparaside\tags\item\smash_enchantable.json
+1c378fa6e60f6f48a8ebde02bf951b4a438e2567 data\minecraft\tags\item\enchantable\mining.json
 f6bb5f603847ceafd2906b158c2911292fc61799 data\minecraft\tags\item\enchantable\fire_aspect.json
-f6bb5f603847ceafd2906b158c2911292fc61799 data\minecraft\tags\item\enchantable\mining_loot.json
+1c378fa6e60f6f48a8ebde02bf951b4a438e2567 data\minecraft\tags\item\enchantable\mining_loot.json

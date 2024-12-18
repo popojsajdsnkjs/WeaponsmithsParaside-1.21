@@ -1,0 +1,14 @@
+{
+  "name": "Test Entry",
+  "icon": "minecraft:writable_book",
+  "category": "weaponsmithsparaside:swords",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": {"item": "weaponsmithsparaside:frostbite"},
+      "title": "Frostbite",
+      "link_recipe": false,
+      "text": "Frostbite is an $(b)ice$() weapon entities with $(e)8.5 base damage$() and $(e)1.6 attack speed$()."
+    }
+  ]
+}

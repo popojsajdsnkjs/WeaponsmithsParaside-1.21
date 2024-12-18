@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.gaeck.weaponsmithsparaside.block.ModBlocks;
+import net.gaeck.weaponsmithsparaside.effect.ModEffect;
 import net.gaeck.weaponsmithsparaside.enchantment.ModEnchantmentEffects;
 import net.gaeck.weaponsmithsparaside.item.ModItems;
 import net.gaeck.weaponsmithsparaside.util.HammerUsageEvent;
@@ -21,6 +22,7 @@ public class WeaponsmithsParaside implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
 		ModEnchantmentEffects.registerModEnchantmentEffects();
+		ModEffect.registerEffects();
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 	}

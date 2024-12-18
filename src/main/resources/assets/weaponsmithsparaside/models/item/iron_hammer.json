@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "weaponsmithsparaside:item/iron_hammer_handheld",
-		"particle": "weaponsmithsparaside:item/iron_hammer_handheld"
+		"0": "weaponsmithsparaside:item/iron_hammer",
+		"particle": "weaponsmithsparaside:item/iron_hammer"
 	},
 	"elements": [
 		{
@@ -213,8 +213,7 @@
 		},
 		"gui": {
 			"rotation": [103.98, 55.22, -88.87],
-			"translation": [-1.25, -1.5, 0],
-			"scale": [0.8, 0.8, 0.8]
+			"translation": [-1.75, -2.25, 0]
 		},
 		"head": {
 			"rotation": [90, 0, 72],
