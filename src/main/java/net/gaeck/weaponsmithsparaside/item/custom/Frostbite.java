@@ -18,6 +18,7 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.util.math.random.RandomSeed;
 
 import java.util.List;
+import java.util.random.RandomGenerator;
 
 public class Frostbite extends SwordItem {
     public Frostbite(ToolMaterial toolMaterial, Settings settings) {
@@ -45,8 +46,11 @@ public class Frostbite extends SwordItem {
         if (target.hasStatusEffect(ModEffect.FROZEN)){
             return super.postHit(stack, target, attacker);
         } else {
-            target.addStatusEffect(new StatusEffectInstance(ModEffect.FROZEN, 50, 1), attacker);
-        }
+            int randomNum = (int)(Math.random() * 6);
+            if (randomNum == 0) {
+                target.addStatusEffect(new StatusEffectInstance(ModEffect.FROZEN, 200, 1), attacker);
+            }
+            }
         return super.postHit(stack, target, attacker);
     }
 
@@ -54,13 +58,7 @@ public class Frostbite extends SwordItem {
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-        if (Screen.hasShiftDown()){
-            tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.frozen_inflicting"));
-            tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.frozen_damage_boost"));
-
-        } else {
-            tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.shift_for_more_info"));
-        }
+        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.ice_origin"));
         super.appendTooltip(stack, context, tooltip, type);
     }
 }

@@ -1,5 +1,6 @@
 package net.gaeck.weaponsmithsparaside.item.custom;
 
+import net.gaeck.weaponsmithsparaside.WeaponsmithsParaside;
 import net.gaeck.weaponsmithsparaside.effect.ModEffect;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -9,12 +10,15 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.DamageSources;
 import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
+import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -50,6 +54,7 @@ public class Icebreaker extends HammerMaceLowFallDamageItem{
         }
     }
 
+
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (target.hasStatusEffect(ModEffect.FROZEN)){
@@ -62,17 +67,7 @@ public class Icebreaker extends HammerMaceLowFallDamageItem{
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.hammer_mine_3x3"));
-        if (Screen.hasShiftDown()){
-            tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.mace_hammer_behavior"));
-            tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.low_hammer_mace_stats"));
-            tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.white_space_line"));
-            tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.frozen_inflicting"));
-            tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.frozen_damage_boost"));
-
-        } else {
-            tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.shift_for_more_info"));
-        }
+        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.ice_origin"));
         super.appendTooltip(stack, context, tooltip, type);
     }
 }

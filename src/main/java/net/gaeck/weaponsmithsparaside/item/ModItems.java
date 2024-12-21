@@ -27,52 +27,13 @@ public class ModItems {
 
     public static final Item STONE_HAMMER = registerItem("stone_hammer",
             new HammerItem(ToolMaterials.STONE,new Item.Settings().attributeModifiers(
-                    PickaxeItem.createAttributeModifiers(ToolMaterials.STONE, 10, -3.6f))){
-                @Override
-                public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-                    tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.hammer_mine_3x3"));
-                    if (Screen.hasShiftDown()){
-                        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.mace_hammer_behavior"));
-                        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.low_hammer_mace_stats"));
-
-                    } else {
-                        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.shift_for_more_info"));
-                    }
-                    super.appendTooltip(stack, context, tooltip, type);
-                }
-            });
+                    PickaxeItem.createAttributeModifiers(ToolMaterials.STONE, 10, -3.6f))));
     public static final Item IRON_HAMMER = registerItem("iron_hammer",
             new HammerItem(ToolMaterials.IRON,new Item.Settings().attributeModifiers(
-                    PickaxeItem.createAttributeModifiers(ToolMaterials.IRON, 10, -3.6f))){
-                @Override
-                public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-                    tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.hammer_mine_3x3"));
-                    if (Screen.hasShiftDown()){
-                        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.mace_hammer_behavior"));
-                        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.low_hammer_mace_stats"));
-
-                    } else {
-                        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.shift_for_more_info"));
-                    }
-                    super.appendTooltip(stack, context, tooltip, type);
-                }
-            });
+                    PickaxeItem.createAttributeModifiers(ToolMaterials.IRON, 10, -3.6f))));
     public static final Item DIAMOND_HAMMER = registerItem("diamond_hammer",
             new HammerMaceLowFallDamageItem(ToolMaterials.DIAMOND,new Item.Settings().attributeModifiers(
-                    PickaxeItem.createAttributeModifiers(ToolMaterials.DIAMOND, 9.5f, -3.6f))){
-                @Override
-                public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-                    tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.hammer_mine_3x3"));
-                    if (Screen.hasShiftDown()){
-                        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.mace_hammer_behavior"));
-                        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.low_hammer_mace_stats"));
-
-                    } else {
-                        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.shift_for_more_info"));
-                    }
-                    super.appendTooltip(stack, context, tooltip, type);
-                }
-            });
+                    PickaxeItem.createAttributeModifiers(ToolMaterials.DIAMOND, 9.5f, -3.6f))));
 
     public static final Item ICEBREAKER = registerItem("icebreaker",
             new Icebreaker(ModToolMaterials.ICE,new Item.Settings().attributeModifiers(
