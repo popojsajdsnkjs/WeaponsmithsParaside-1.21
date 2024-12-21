@@ -8,7 +8,7 @@
       "item": {"item": "weaponsmithsparaside:frostbite"},
       "title": "Frostbite",
       "link_recipe": false,
-      "text": "Frostbite is an $(b)ice$() weapon entities with $(e)8.5 base damage$() and $(e)1.6 attack speed$()."
+      "text": "Frostbite is an $(b)$(l)ice$() weapon with $(6)$(l)8.5 base damage$() and $(6)$(l)1.6 attack speed$().$(br)It has $(6)$(l)1 in 5$() chance to freeze an enemy."
     }
   ]
 }

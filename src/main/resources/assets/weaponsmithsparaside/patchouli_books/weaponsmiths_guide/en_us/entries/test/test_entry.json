@@ -1,7 +1,7 @@
 {
   "name": "Test Entry",
   "icon": "minecraft:writable_book",
-  "category": "weaponsmithsparaside:weapon_type",
+  "category": "weaponsmithsparaside:weapon_types",
   "pages": [
     {
       "type": "patchouli:text",

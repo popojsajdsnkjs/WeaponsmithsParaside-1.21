@@ -186,17 +186,17 @@ public class HammerMaceLowFallDamageItem extends MiningToolItem {
     public static boolean shouldDealAdditionalDamage(LivingEntity attacker) {
         return attacker.fallDistance > 5.0F && !attacker.isFallFlying();
     }
-    /*
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.hammer_mine_3x3"));
         if (Screen.hasShiftDown()){
-        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.mace_hammer_behavior"));
-        tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.low_hammer_mace_stats"));
+            tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.mace_hammer_behavior"));
+            tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.low_hammer_mace_stats"));
 
         } else {
             tooltip.add(Text.translatable("tooltip.weaponsmithsparaside.shift_for_more_info"));
         }
         super.appendTooltip(stack, context, tooltip, type);
-    }*/
+    }
 }

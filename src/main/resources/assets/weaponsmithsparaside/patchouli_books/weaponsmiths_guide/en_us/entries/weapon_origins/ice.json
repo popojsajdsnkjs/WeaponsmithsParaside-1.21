@@ -1,0 +1,15 @@
+{
+  "name": "Ice",
+  "icon": "minecraft:packed_ice",
+  "category": "weaponsmithsparaside:weapon_origins",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ice weapons have ability to $(b)$(l)freeze$() entities on hit for $(6)$(l)20 seconds$()(only to enemies that aren't arleady frozen).$(br)Weapons with this origin deal $(6)$(l)5 additional damage$() to frozen entities."
+    },{
+      "type": "patchouli:text",
+      "title": "Frozen effect",
+      "text": "$(b)$(l)Frozen effect$() is the effect that is applied to frozen entities. It slows down the entity. Entities with this effect can't be lit on fire (the only exception is if the entity is standing in lava or fire)"
+    }
+  ]
+}
